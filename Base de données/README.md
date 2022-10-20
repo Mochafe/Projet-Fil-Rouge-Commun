@@ -70,7 +70,6 @@ Codification | Type | Contraintes | Règles
  order_user_id | INT | REFERENCES user(user_id)
  order_billing_address_id | INT |  REFERENCES address(address_id)
  order_delivery_address_id | INT |  REFERENCES address(address_id)
- user_id | INT | REFERENCES user(user_id)
  order_date | DATETIME
  order_shipped | BOOLEAN
  order_billing_date | DATETIME
