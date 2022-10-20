@@ -57,9 +57,7 @@ Codification | Type | Contraintes | Règles
  product_name | VARCHAR(50) | | Ne pas oublier la brand dans le nom
  product_description | VARCHAR(150)
  product_price | INT
- product_content | VARCHAR(150)
  product_discount | DECIMAL(3,2)
- product_discount_rate | DECIMAL(8,2)
  product_stock_quantity | INT | > 0 
  product_image | VARCHAR(50)
  product_image2 | VARCHAR(50)
