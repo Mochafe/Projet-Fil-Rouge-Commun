@@ -99,7 +99,7 @@ Codification | Type | Contraintes | Règles
  order_id | INT  |REFERENCES order(order_id)
  order_delivery_date | DATETIME
  order_delivery_shipment | DATETIME
-  order_delivery_bill| DATETIME
+order_delivery_bill| DATETIMEE
 
 
 
