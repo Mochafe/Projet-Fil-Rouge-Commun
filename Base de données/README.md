@@ -1,5 +1,4 @@
 
-
 # Dictionnaire de données
 
 ## Table User
@@ -58,7 +57,9 @@ Codification | Type | Contraintes | Règles
  product_name | VARCHAR(50) | | Ne pas oublier la brand dans le nom
  product_description | VARCHAR(150)
  product_price | INT NOT NULL
+ product_content | VARCHAR(150)
  product_discount | DECIMAL(3,2)
+ product_discount_rate | DECIMAL(8,2)
  product_stock_quantity | INT | > 0 
 
 
@@ -244,7 +245,9 @@ CREATE TABLE product(
    product_description VARCHAR(150) ,
    product_reference VARCHAR(50) ,
    product_price INT NOT NULL,
-   product_discount DECIMAL(3,2),
+   product_content VARCHAR(150) ,
+   product_discount DECIMAL(3,2)  ,
+   product_discount_rate DECIMAL(8,2)  ,
    product_stock_quantity INT,
    product_category_id INT,
    product_supplier_id INT,
@@ -325,6 +328,3 @@ CREATE TABLE contained(
    FOREIGN KEY(contained_cart_id) REFERENCES cart(cart_id)
 );
 ```
-
-# MCD
-<img src="Fil_Rouge_MCD.jpg">
