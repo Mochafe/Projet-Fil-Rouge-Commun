@@ -56,8 +56,7 @@ Codification | Type | Contraintes | Règles
  product_category_id | INT |  REFERENCES category(category_id)
  product_name | VARCHAR(50) | | Ne pas oublier la brand dans le nom
  product_description | VARCHAR(150)
- product_price | INT NOT NULL
- product_content | VARCHAR(150)
+ product_price | DECIMAL(8,2) NOT NULL
  product_discount | DECIMAL(3,2)
  product_discount_rate | DECIMAL(8,2)
  product_stock_quantity | INT | > 0 
@@ -157,7 +156,7 @@ address = (address_id INT AUTO_INCREMENT, address_street VARCHAR(50), address_co
 cart = (cart_id INT AUTO_INCREMENT, cart_quantity INT, #cart_user_id);
 
 
-product = (product_id INT AUTO_INCREMENT, product_name VARCHAR(50), product_description VARCHAR(150), product_reference VARCHAR(50), product_price INT, product_content VARCHAR(150), product_discount DECIMAL(3,2), product_discount_rate DECIMAL(8,2), product_stock_quantity INT, #product_category_id*, #product_supplier_id*);
+product = (product_id INT AUTO_INCREMENT, product_name VARCHAR(50), product_description VARCHAR(150), product_reference VARCHAR(50), product_price DECIMAL(8,2), product_discount DECIMAL(3,2), product_discount_rate DECIMAL(8,2), product_stock_quantity INT, #product_category_id*, #product_supplier_id*);
 
 
 order = (order_id INT AUTO_INCREMENT, order_date DATETIME, order_shipped BOOLEAN, order_billing_date DATETIME, order_payment_method VARCHAR(50), order_pay BOOLEAN, #order_delivery_address_id, #order_billing_address_id, #order_user_id);
@@ -244,8 +243,7 @@ CREATE TABLE product(
    product_name VARCHAR(50) ,
    product_description VARCHAR(150) ,
    product_reference VARCHAR(50) ,
-   product_price INT NOT NULL,
-   product_content VARCHAR(150) ,
+   product_price DECIMAL(8,2) NOT NULL,
    product_discount DECIMAL(3,2)  ,
    product_discount_rate DECIMAL(8,2)  ,
    product_stock_quantity INT,
