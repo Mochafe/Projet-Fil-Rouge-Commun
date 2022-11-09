@@ -15,7 +15,7 @@ User->>Système:  Clique sur ajouter au panier.
 Système->>User: écran du panier.
 end
 User->>Système: Clique sur valider la commande.
-alt User non connecté 
+alt User non connecté
 Système->>User: Affiche  un formulaire d'authentification.
 User->>Système: Saisit les champs d'authentifications.
 Système->>User: Valide l'authentification
@@ -35,4 +35,4 @@ Système->>User: Valide la commande, envoiet un mail recapitulatif.
 
 
 
-``` 
+```
