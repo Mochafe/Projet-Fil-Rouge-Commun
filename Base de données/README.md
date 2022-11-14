@@ -26,7 +26,7 @@ Codification | Type | Contraintes | Règles
 ---------|----------| ----------- | -----
  forgotten password_id | INT AUTO_INCREMENT | PRIMARY KEY
  forgotten_code | VARCHAR(16)
-created_at | DATETIME
+ created_at | DATETIME
  
  user_id | INT UNIQUE NOT NULL | REFERENCES user(user_id)
 
