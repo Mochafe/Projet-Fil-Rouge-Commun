@@ -21,6 +21,16 @@ Codification | Type | Contraintes | Règles
  user_pro_company_name | VARCHAR(50) 
  user_pro_duns | VARCHAR(50) | | DUNS = SIRET international (Data universal number system) 
 
+ ## TABLE Forgotten password
+Codification | Type | Contraintes | Règles
+---------|----------| ----------- | -----
+ forgotten password_id | INT AUTO_INCREMENT | PRIMARY KEY
+ forgotten_code | VARCHAR(16)
+created_at | DATETIME
+ 
+ user_id | INT UNIQUE NOT NULL | REFERENCES user(user_id)
+
+
 ## Table Supplier
 Codification | Type | Contraintes | Règles
 ---------|----------| ----------- | -----
@@ -204,6 +214,15 @@ CREATE TABLE user(
    user_pro_company_name VARCHAR(50) ,
    user_pro_duns VARCHAR(50) ,
    PRIMARY KEY(user_id)
+);
+
+CREATE TABLE Forgotten_password(
+   forgotten_password_id INT AUTO_INCREMENT,
+   forgotten_code VARCHAR(16) ,
+   created_at DATETIME,
+   user_id INT,
+   PRIMARY KEY(forgotten_password_id),
+   FOREIGN KEY(user_id) REFERENCES _user(user_id)
 );
 
 CREATE TABLE supplier(
